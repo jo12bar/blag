@@ -27,3 +27,7 @@ qualifications &mdash; I'm still in high school, and have had no formal
 programming training whatsoever (my school doesn't offer those sorts of
 courses). So... If you decide to base *anything* off my work in this repo, be
 warned: __*There be dragons!*__
+
+---
+
+[LICENSE](/LICENSE)
