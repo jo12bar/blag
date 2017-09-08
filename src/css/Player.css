@@ -1,0 +1,79 @@
+.heroContainer {
+  height: 30vh;
+  margin-bottom: .625rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.iframe {
+  composes: heroContainer;
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: initial;
+
+  background-color: #000;
+  background-size: initial;
+  background-position: initial;
+}
+
+.playIcon {
+  width: 2em;
+  height: 2em;
+  padding: .2em .1em .2em .3em;
+  border-radius: 1.2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #1b1ddf;
+
+  cursor: pointer;
+}
+
+.playIconContainer {
+  position: relative;
+  font-size: 2em;
+  border-radius: 1.2em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+
+  transform: scale(1);
+  transition: transform .3s ease;
+}
+
+.playIconContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2em;
+  background-color: transparent;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.playIconContainer:hover {
+  transform: scale(1.1);
+}
+
+.playIconContainer:hover::after {
+  opacity: .5;
+}
+
+.playIconContainer:active {
+  transform: scale(1.2);
+}
+
+.playIconContainer:active::after {
+  opacity: 1;
+}

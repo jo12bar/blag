@@ -1,0 +1,7 @@
+div.list {
+  background: #141414;
+  border: 1px solid #1e1e1e;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}

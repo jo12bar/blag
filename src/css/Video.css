@@ -1,0 +1,80 @@
+div.video {
+  background: #1b2022;
+  border-color: transparent;
+  display: block;
+}
+
+.infoContainer {
+  z-index: 1;
+  position: relative;
+  padding: .625rem .938rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #32323c;
+  background: #23282a;
+}
+
+.title {
+  color: #c8c8c8;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.375em;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.infoRow {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.category {
+  background-color: #1b1ddf;
+  opacity: .75;
+  min-width: 11.875em;
+  height: 1.5em;
+  padding: 0 .5em;
+  margin-top: .938em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category span {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.063em;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.byText {
+  color: #afafaf;
+  font-family: "Roboto", sans-serif;
+  font-size: .875em;
+  margin-top: .714em;
+  margin-left: 1.071em;
+}
+
+.tipTitle {
+  font-size: 22px;
+  font-weight: normal;
+  font-family: "Roboto Slab", serif;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(4, 10, 40, .6);
+  margin-bottom: .612em;
+}
+
+.tip {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  color: #dcdcdc;
+  margin-bottom: .5em;
+}
+
+.tipMissing {
+  color: orange;
+}
+
+.tipMissingCode {
+  color: white;
+}

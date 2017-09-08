@@ -1,0 +1,73 @@
+div.home {
+  background: #141414;
+  border: 1px solid #1e1e1e;
+  box-sizing: border-box;
+  padding: .625rem;
+  display: block;
+  overflow-y: auto;
+}
+
+.home h1 {
+  color: #fcc19e;
+  font-family: Roboto, sans-serif;
+  font-size: 1.125em;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #050505;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0;
+}
+
+.home h2 {
+  color: #41a7d6;
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  margin-top: -.25em;
+}
+
+.home span {
+  color: #6a767c;
+  font-family: Roboto, sans-serif;
+  display: block;
+  margin: .5em 0;
+  position: relative;
+}
+
+.home pre {
+  color: #6a767c;
+  font-size: .875em;
+  -webkit-font-smoothing: antialiased;
+  margin-top: -.5em;
+}
+
+span.linkExampleLabel {
+  color: #c8c8c8;
+  margin-top: 1.25em;
+  font-weight: bold;
+}
+
+span.directionsLabel {
+  color: #c5af8f;
+  display: inline;
+  font-weight: bold;
+}
+
+span.directions {
+  display: inline;
+  color: #52afda;
+}
+
+.articleLinks {
+  color: #3de345;
+  -webkit-font-smoothing: antialiased;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.articleLinks:hover {
+  color: rgba(61, 227, 69, .7);
+  text-decoration: underline;
+}
