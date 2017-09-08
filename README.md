@@ -1,14 +1,10 @@
-<div style="text-align:center">
-![Finally decides to do homework... Somehow ends up making a side project...](/README-header.jpg)
+<div align="center">
+  <img src="https://rawgit.com/jo12bar/blag/master/README-header.jpg" title="Finally decides to do homework... Somehow ends up making a side project..." />
 </div>
 
-<div style="text-align:center">
-  <h1>blag</h1>
-</div>
+<h1 align="center">blag</h1>
 
-<div style="text-align:center;">
-  A testing ground for various technologies.
-</div>
+<p align="center">A testing ground for various technologies.</p>
 
 ## Rationale
 
