@@ -13,7 +13,7 @@
   text-shadow: 1px 1px 1px #2d2d2d;
 }
 
-.sidebar a, .sidebar button {
+.sidebar a {
   display: block;
   color: rgba(255, 255, 255, .9);
   background: #23282a;
@@ -31,10 +31,6 @@
   transition: all .3s ease;
 }
 
-.sidebar button {
-  width: 100%;
-}
-
 .sidebar .active {
   background-image: linear-gradient(
     to right,
@@ -50,8 +46,7 @@
   color: rgba(34, 34, 34, .9);
 }
 
-.sidebar a:hover,
-.sidebar button:hover {
+.sidebar a:hover {
   background: #85715a;
 }
 
