@@ -8,13 +8,12 @@ export default {
     path: '/list/:category',
     thunk: async (dispatch, getState) => {
       const {
-        jwToken,
         location: { payload: { category } },
         videosByCategory,
       } = getState();
 
       if (videosByCategory[category]) return null;
-      const videos = await fetchData(`/api/videos/${category}`, jwToken);
+      const videos = await fetchData(`/api/videos/${category}`);
 
       if (videos.length === 0) return dispatch({ type: NOT_FOUND });
 
@@ -36,10 +35,9 @@ export default {
        * the the corresponding action type which I'll leave up to you to find *
        * in ../reducers/index.js :)                                           */
       const {
-        jwToken,
         location: { payload: { slug } },
       } = getState();
-      const video = await fetchData(`/api/video/${slug}`, jwToken);
+      const video = await fetchData(`/api/video/${slug}`);
 
       if (!video) {
         return dispatch({ type: NOT_FOUND });
@@ -59,13 +57,6 @@ export default {
         dispatch(action);
       }
     },
-  },
-
-  LOGIN: '/login',
-
-  ADMIN: {
-    path: '/admin', // TRY: visit this path or dispatch ADMIN
-    role: 'admin', // + change jwToken to 'real' in server/index.js
   },
 };
 

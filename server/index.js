@@ -1,7 +1,6 @@
 import 'babel-polyfill';
 import express from 'express';
 import morgan from 'morgan';
-import cookieParser from 'cookie-parser';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
@@ -16,36 +15,18 @@ const publicPath = clientConfig.output.publicPath;
 const outputPath = clientConfig.output.path;
 const app = express();
 
+// Setup logger
 app.use(morgan(DEV ? 'dev' : 'combined'));
-
-// JWTOKEN COOKIE - in a real app obviously you set this after signup/login:
-
-app.use(cookieParser());
-
-app.use((req, res, next) => {
-  const cookie = req.cookies.jwToken;
-  // TODO: Set the below to 'real' to authenticate ADMIN route
-  const jwToken = 'fake';
-
-  if (cookie !== jwToken) {
-    res.cookie('jwToken', jwToken, { maxAge: 900000 });
-    req.cookies.jwToken = jwToken;
-  }
-
-  next();
-});
 
 // API
 
 app.get('/api/videos/:category', async (req, res) => {
-  const jwToken = req.headers.authorization.split(' ')[1];
-  const data = await findVideos(req.params.category, jwToken);
+  const data = await findVideos(req.params.category);
   res.json(data);
 });
 
 app.get('/api/video/:slug', async (req, res) => {
-  const jwToken = req.headers.authorization.split(' ')[1];
-  const data = await findVideo(req.params.slug, jwToken);
+  const data = await findVideo(req.params.slug);
   res.json(data);
 });
 

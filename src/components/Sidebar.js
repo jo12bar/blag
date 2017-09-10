@@ -57,12 +57,6 @@ const Sidebar = ({ onClick, path }) => (
     >
       FP
     </button>
-
-    <div className={styles.seperator2} />
-
-    <NavLink activeClassName={styles.active} to={{ type: 'ADMIN' }}>
-      ADMIN
-    </NavLink>
   </div>
 );
 

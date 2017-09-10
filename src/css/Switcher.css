@@ -169,45 +169,6 @@
   transition: all .5s;
 }
 
-/** ADMIN PANEL **/
-
-.admin {
-  text-align: center;
-  padding-top: calc((100vh - 380px) / 2);
-}
-
-.admin:before {
-  content: 'ADMIN PANEL';
-  position: absolute;
-  top: 1.25rem;
-  left: 0;
-  width: 100%;
-  font-size: 2rem;
-  color: #464646;
-  text-shadow: 1px 1px 1px #000;
-  text-align: center;
-}
-
-.admin:after {
-  content: '🎖️ CONGRATS: LEVEL 2 UNLOCKED!';
-  position: absolute;
-  bottom: 1.25rem;
-  left: 0;
-  width: 100%;
-  font-size: 1.625rem;
-  color: #56a0d6;
-  text-shadow: 1px 1px 1px #000;
-  text-align: center;
-}
-
-.login {
-  text-align: center;
-  padding-top: calc((100vh - 380px) / 2);
-  color: red !important;
-  font-size: 1.625rem;
-  text-shadow: 1px 1px 1px #000;
-}
-
 /** NOT FOUND **/
 
 .notFound {

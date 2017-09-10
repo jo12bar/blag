@@ -17,7 +17,7 @@ export default ({ clientStats }) => async (req, res) => {
   const store = await configureStore(req, res);
 
   // No store means that the redirect was already served.
-  if (!store) return;
+  if (!store) return null;
 
   const app = createApp(App, store);
   const appString = ReactDOM.renderToString(app);
@@ -28,7 +28,6 @@ export default ({ clientStats }) => async (req, res) => {
   console.log('REQUESTED PATH:', req.path);
   console.log('CHUNK NAMES:', chunkNames);
 
-  /* eslint-disable consistent-return */
   return res.send(dedent`
     <!DOCTYPE html>
 
@@ -48,5 +47,4 @@ export default ({ clientStats }) => async (req, res) => {
       </body>
     </html>
   `);
-  /* eslint-enable consistent-return */
 };

@@ -13,7 +13,7 @@ const composeEnhancers = (...args) => (
     : compose(...args)
 );
 
-export default (history, preLoadedState) => {
+export default (history, preLoadedState = {}) => {
   const { reducer, middleware, enhancer, thunk } = connectRoutes(
     history,
     routesMap,

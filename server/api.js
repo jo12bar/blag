@@ -134,10 +134,8 @@ const dbGraphQLVideos = [
 
 const allVideos = reactReduxVideos.concat(dbGraphQLVideos, fpVideos);
 
-export const findVideos = async (category, jwToken) => {
+export const findVideos = async category => {
   await fakeDelay(1000);
-
-  if (!jwToken) return []; // In a real app, you'd authenticate.
 
   switch (category) {
     case 'fp': return fpVideos;
@@ -147,9 +145,8 @@ export const findVideos = async (category, jwToken) => {
   }
 };
 
-export const findVideo = async (slug, jwToken) => {
+export const findVideo = async slug => {
   await fakeDelay(500);
-  if (!jwToken) return null; // TRY: set the cookie === ''
 
   return allVideos.find(video => video.slug === slug);
 };

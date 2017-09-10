@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
-    "cookie-parser": "^1.4.3",
     "dedent": "^0.7.0",
     "deline": "^1.0.4",
     "express": "^4.15.2",
