@@ -8,6 +8,8 @@
 
 ## Rationale
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jo12bar/blag.svg)](https://greenkeeper.io/)
+
 Some smart people keep saying, over and over, that everyone needs some sort
 of side project. As someone who is vastly inferior to these smart people, I made
 a blog. I figure that this blog can be my, as I can incrementally add to it in
