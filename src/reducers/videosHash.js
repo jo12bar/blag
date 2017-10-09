@@ -2,16 +2,16 @@ export default (state = {}, action = {}) => {
   switch (action.type) {
     case 'VIDEOS_FETCHED': {
       const { videos } = action.payload;
-      return videos.reduce((videos, video) => {
-        state[video.slug] = video;
-        return videos;
-      }, state);
+      const videosHash = videos.reduce((vs, v) => ({ ...vs, [v.slug]: v }), {});
+      return { ...state, ...videosHash };
     }
 
     case 'VIDEO_FOUND': {
       const { slug, video } = action.payload;
-      state[slug] = video;
-      return state;
+      return {
+        ...state,
+        [slug]: video,
+      };
     }
 
     default: return state;
